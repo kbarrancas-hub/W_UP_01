@@ -45,7 +45,8 @@ boxplot(pushups~position,data=mydata)
 
 <!--Graphical results here. Make sure to show your code. Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too. Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
    
-  The lower range of "Skill" players passes the upper range of the "Line" players. Based on what Dr. K explained, I expect this will show a statistical difference.  
+  The lower range of "Skill" players passes the upper range of the "Line" players. Based on what Dr. K explained, I expect this will show a statistical difference.
+  
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
@@ -61,6 +62,11 @@ favstats(pushups~position,data=mydata)
 <!--State hypothesis clearly. Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc. Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
 
+```{r}
+t.test(pushups~position,data=mydata)
+```
+If there were no true difference between Line and Skill players, the chance of observing this result is .000009421. Such a tiny p-value shows a clear and significant gap between the groups. 
+ 
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here. If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason. Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
